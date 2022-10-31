@@ -65,7 +65,7 @@ namespace ProductsAndCategories.Migrations
             modelBuilder.Entity("ProductsAndCategories.Models.Products", b =>
                 {
                     b.HasOne("ProductsAndCategories.Models.Category", "Category")
-                        .WithMany("Products")
+                        .WithMany()
                         .HasForeignKey("CategoryID")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();

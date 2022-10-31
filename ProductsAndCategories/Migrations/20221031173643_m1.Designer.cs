@@ -9,8 +9,8 @@ using ProductsAndCategories;
 namespace ProductsAndCategories.Migrations
 {
     [DbContext(typeof(myDBContext))]
-    [Migration("20221030192339_Initial")]
-    partial class Initial
+    [Migration("20221031173643_m1")]
+    partial class m1
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -67,7 +67,7 @@ namespace ProductsAndCategories.Migrations
             modelBuilder.Entity("ProductsAndCategories.Models.Products", b =>
                 {
                     b.HasOne("ProductsAndCategories.Models.Category", "Category")
-                        .WithMany("Products")
+                        .WithMany()
                         .HasForeignKey("CategoryID")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
